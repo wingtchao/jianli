@@ -750,7 +750,7 @@ function renderHero(){
 
   /* 缺失字段自动跳过，不留空条目 */
   var meta=[];
-  [txt(p.city),txt(p.experience),'可立即到岗 · 接受驻组'].forEach(function(m){
+  [txt(p.city),txt(p.experience),'南昌大学 · 数字媒体'].forEach(function(m){
     if(m.trim()) meta.push('<span><i class="dot"></i><b>'+esc(m)+'</b></span>');
   });
   document.getElementById('heroMeta').innerHTML=meta.join('');
