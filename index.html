@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>林晓 · 短剧剪辑师个人简历</title>
+<title>赵永涛 · 短剧剪辑师个人简历</title>
 <style>
 /* SECTION: reset-base */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -130,6 +130,7 @@ section:nth-of-type(even){ background:var(--bg2); }
 .sec-line{ height:1px; background:linear-gradient(90deg,var(--gold),transparent); margin:-18px 0 30px; opacity:.4; }
 
 /* SECTION: stats */
+.hero-stats{ margin-top:38px; }
 .stats{ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
 .stat{
   background:linear-gradient(165deg,var(--card2),var(--card));
@@ -142,14 +143,15 @@ section:nth-of-type(even){ background:var(--bg2); }
 .stat-num small{ font-size:16px; font-weight:700; margin-left:3px; letter-spacing:0; }
 .stat-label{ margin-top:9px; font-size:13px; color:var(--tx2); }
 
-/* SECTION: works */
+/* SECTION: works（竖版海报） */
 .works-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
 .work{
-  background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden;
-  display:flex; flex-direction:column; transition:transform .25s,border-color .25s,box-shadow .25s;
+  background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden;
+  display:flex; flex-direction:column; color:inherit; text-decoration:none;
+  transition:transform .25s,border-color .25s,box-shadow .25s;
 }
 .work:hover{ transform:translateY(-5px); border-color:rgba(245,181,68,.4); box-shadow:0 20px 46px rgba(0,0,0,.5); }
-.work-cover{ position:relative; aspect-ratio:16/10; overflow:hidden; background:linear-gradient(140deg,#2a2233,#1a1a24); }
+.work-cover{ position:relative; aspect-ratio:3/4; overflow:hidden; background:linear-gradient(140deg,#2a2233,#1a1a24); }
 .work-cover img{ width:100%; height:100%; object-fit:cover; transition:transform .5s; }
 .work:hover .work-cover img{ transform:scale(1.06); }
 .cover-fallback{
@@ -158,51 +160,14 @@ section:nth-of-type(even){ background:var(--bg2); }
 }
 .work-cover.no-img img{ display:none; }
 .work-cover.no-img .cover-fallback{ display:grid; }
-.cover-badge{
-  position:absolute; top:11px; left:11px; padding:4px 11px; border-radius:14px;
-  background:rgba(11,11,15,.78); backdrop-filter:blur(6px); font-size:11.5px; font-weight:700;
-  color:var(--gold2); border:1px solid rgba(245,181,68,.32);
+.work-link{
+  position:absolute; right:10px; bottom:10px; width:30px; height:30px; border-radius:9px;
+  display:grid; place-items:center; background:rgba(11,11,15,.72); backdrop-filter:blur(6px);
+  border:1px solid rgba(245,181,68,.34); color:var(--gold2);
 }
-.cover-play{
-  position:absolute; right:11px; bottom:11px; padding:4px 10px; border-radius:14px;
-  background:rgba(232,69,127,.88); font-size:11.5px; font-weight:700; color:#fff;
-}
-.work-body{ padding:18px 18px 20px; display:flex; flex-direction:column; flex:1; }
-.work-title{ font-size:18.5px; font-weight:800; letter-spacing:-.2px; line-height:1.35; }
-.work-genre{ margin-top:5px; font-size:12.5px; color:var(--cyan); }
-.work-info{ margin-top:12px; display:flex; flex-direction:column; gap:6px; font-size:12.5px; color:var(--tx2); }
-.work-info div{ display:flex; gap:8px; }
-.work-info b{ color:var(--tx3); font-weight:500; flex-shrink:0; min-width:52px; }
-.work-metrics{
-  margin-top:14px; padding-top:14px; border-top:1px dashed var(--line2);
-  display:grid; grid-template-columns:1fr 1fr; gap:9px;
-}
-.metric{ background:rgba(255,255,255,.04); border-radius:9px; padding:8px 10px; }
-.metric em{ display:block; font-size:10.5px; font-style:normal; color:var(--tx3); }
-.metric strong{ display:block; font-size:15.5px; font-weight:800; color:var(--gold2); line-height:1.35; margin-top:2px; }
-.work-toggle{
-  margin-top:16px; width:100%; padding:11px; border-radius:11px; font-size:13.5px; font-weight:700;
-  background:rgba(245,181,68,.11); border:1px solid rgba(245,181,68,.26); color:var(--gold2);
-  display:flex; align-items:center; justify-content:center; gap:8px; transition:all .2s;
-}
-.work-toggle:hover{ background:rgba(245,181,68,.2); }
-.work-toggle svg{ width:13px; height:13px; transition:transform .3s; }
-.work.open .work-toggle svg{ transform:rotate(180deg); }
-.work-detail{ max-height:0; overflow:hidden; transition:max-height .45s cubic-bezier(.4,0,.2,1); }
-.work.open .work-detail{ max-height:760px; }
-.detail-in{ padding-top:16px; margin-top:2px; }
-.d-block{ margin-bottom:14px; }
-.d-block:last-child{ margin-bottom:0; }
-.d-block h5{
-  font-size:11.5px; letter-spacing:1.4px; color:var(--magenta); font-weight:800; margin-bottom:5px;
-  display:flex; align-items:center; gap:7px;
-}
-.d-block h5::before{ content:""; width:14px; height:2px; background:var(--magenta); border-radius:2px; }
-.d-block p{ font-size:13.5px; color:var(--tx2); line-height:1.78; }
-.d-note{
-  margin-top:14px; padding:8px 12px; border-radius:9px; font-size:11.5px;
-  background:rgba(232,69,127,.1); border:1px solid rgba(232,69,127,.24); color:#f0a8c3;
-}
+.work-link svg{ width:14px; height:14px; }
+.work-title{ padding:12px 14px 14px; font-size:15.5px; font-weight:800; line-height:1.4; letter-spacing:-.1px; }
+.work.has-link .work-title{ color:var(--gold2); }
 
 /* SECTION: method */
 .methods{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
@@ -365,6 +330,11 @@ section:nth-of-type(even){ background:var(--bg2); }
 .backtop svg{ width:17px; height:17px; }
 
 /* SECTION: editor-fab */
+/* 上线模式（SITE_CONFIG.editorEnabled = false）时隐藏全部编辑入口 */
+body.editor-off .edit-fab,
+body.editor-off .drawer,
+body.editor-off .drawer-mask,
+body.editor-off .draft-bar{ display:none !important; }
 .edit-fab{
   position:fixed; right:22px; bottom:80px; z-index:70; height:44px; padding:0 18px;
   border-radius:22px; background:var(--grad); color:#17131a; font-size:14px; font-weight:800;
@@ -495,7 +465,8 @@ textarea.finput{ min-height:66px; }
 @media (max-width:1000px){
   .hero-grid{ grid-template-columns:1fr; gap:30px; }
   .hero-card{ max-width:100%; }
-  .works-grid,.methods,.quotes{ grid-template-columns:repeat(2,1fr); }
+  .works-grid{ grid-template-columns:repeat(3,1fr); gap:14px; }
+  .methods,.quotes{ grid-template-columns:repeat(2,1fr); }
   .stats{ grid-template-columns:repeat(2,1fr); }
   .skills-layout,.insights,.edu-layout{ grid-template-columns:1fr; gap:24px; }
 }
@@ -513,7 +484,8 @@ textarea.finput{ min-height:66px; }
   .nav-print{ display:none; }
   .hero{ padding:88px 0 44px; }
   .sec-head p{ margin-left:0; width:100%; padding-bottom:0; }
-  .works-grid,.methods,.quotes{ grid-template-columns:1fr; }
+  .works-grid{ grid-template-columns:repeat(2,1fr); gap:12px; }
+  .methods,.quotes{ grid-template-columns:1fr; }
   .tl-role{ margin-left:0; width:100%; }
   section{ padding:44px 0; }
   .backtop{ right:14px; bottom:18px; }
@@ -530,13 +502,12 @@ textarea.finput{ min-height:66px; }
 @media (max-width:420px){
   .stats{ grid-template-columns:1fr 1fr; gap:11px; }
   .stat{ padding:18px 12px; }
-  .work-metrics{ grid-template-columns:1fr 1fr; gap:7px; }
 }
 
 /* SECTION: print */
 @media print{
   body{ background:#fff; color:#111; font-size:11.5pt; }
-  .topnav,.backtop,.toast,.work-toggle,.footer-actions,.demo-flag,.cover-play,
+  .topnav,.backtop,.toast,.footer-actions,.demo-flag,.work-link,
   .edit-fab,.drawer,.drawer-mask,.draft-bar{ display:none !important; }
   body.draft-on .hero{ padding-top:0 !important; }
   .hero{ padding:0 0 14px; }
@@ -547,11 +518,10 @@ textarea.finput{ min-height:66px; }
     background:#fff !important; border:1px solid #ccc !important; box-shadow:none !important;
     margin-bottom:9px; padding:11px !important; page-break-inside:avoid; transform:none !important;
   }
-  .stats{ display:grid !important; grid-template-columns:repeat(4,1fr); gap:8px; }
-  .works-grid,.methods,.quotes{ display:grid !important; grid-template-columns:repeat(2,1fr); gap:9px; }
-  .work-detail{ max-height:none !important; overflow:visible !important; }
-  .work-cover{ aspect-ratio:16/9; }
-  h1,h2,h3,h4,h5,strong,.hero-role,.grad-tx,.stat-num,.metric strong{ color:#111 !important; -webkit-text-fill-color:#111 !important; }
+  .stats{ display:grid !important; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:14px; }
+  .works-grid,.methods,.quotes{ display:grid !important; grid-template-columns:repeat(3,1fr); gap:9px; }
+  .work-cover{ aspect-ratio:3/4; }
+  h1,h2,h3,h4,h5,strong,.hero-role,.grad-tx,.stat-num,.metric strong,.work-title{ color:#111 !important; -webkit-text-fill-color:#111 !important; }
   .sec-no,.tl-period,.skill-pct,.work-genre,.edu-item em,.insight-tag{ color:#666 !important; }
   p,li,.d-block p,.ability p,.insight p,.quote p,.work-info,.tl-points li,.skill-note,.c-tx strong{ color:#333 !important; }
   .skill-bar{ background:#e5e5e5 !important; }
@@ -572,18 +542,14 @@ textarea.finput{ min-height:66px; }
   <div class="wrap nav-inner">
     <div class="brand">
       <div class="brand-mark">剪</div>
-      <div class="brand-tx">林晓<small>DRAMA EDITOR</small></div>
+      <div class="brand-tx">赵永涛<small>DRAMA EDITOR</small></div>
     </div>
     <div class="nav-links" id="navLinks">
       <a href="#hero" data-nav="hero" class="active">首页</a>
-      <a href="#stats" data-nav="stats">数据</a>
       <a href="#works" data-nav="works">爆款作品</a>
       <a href="#method" data-nav="method">剪辑方法论</a>
       <a href="#skills" data-nav="skills">软件技能</a>
       <a href="#experience" data-nav="experience">工作经历</a>
-      <a href="#insight" data-nav="insight">行业认知</a>
-      <a href="#education" data-nav="education">教育证书</a>
-      <a href="#quotes" data-nav="quotes">合作评价</a>
       <a href="#contact" data-nav="contact">联系我</a>
     </div>
     <button class="nav-print" data-print type="button">打印 / 存为 PDF</button>
@@ -596,8 +562,8 @@ textarea.finput{ min-height:66px; }
 <header class="hero" id="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="demo-flag"><i></i>示例模板 · 文案与数据均为虚构，请替换为你的真实信息</div>
-      <h1>林<span class="grad-tx">晓</span></h1>
+  
+      <h1 id="heroName">林<span class="grad-tx">晓</span></h1>
       <div class="hero-role" id="heroRole">短剧剪辑师 / 后期组长</div>
       <div class="hero-intention" id="heroIntention"></div>
       <p class="hero-slogan" id="heroSlogan"></p>
@@ -609,21 +575,15 @@ textarea.finput{ min-height:66px; }
       <div id="contactList"></div>
     </aside>
   </div>
-</header>
-
-<!-- SECTION: stats -->
-<section id="stats">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-no">01</span><h2>数据看板</h2><p>用结果说话</p></div>
-    <div class="sec-line"></div>
+  <div class="wrap hero-stats">
     <div class="stats reveal" id="statsGrid"></div>
   </div>
-</section>
+</header>
 
 <!-- SECTION: works -->
 <section id="works">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-no">02</span><h2>爆款短剧作品</h2><p>点击卡片展开剪辑手记</p></div>
+    <div class="sec-head"><span class="sec-no">01</span><h2>爆款短剧作品</h2><p>点击封面查看作品</p></div>
     <div class="sec-line"></div>
     <div class="works-grid" id="worksGrid"></div>
   </div>
@@ -632,7 +592,7 @@ textarea.finput{ min-height:66px; }
 <!-- SECTION: method -->
 <section id="method">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-no">03</span><h2>剪辑方法论</h2><p>可复用的爆款生产流程</p></div>
+    <div class="sec-head"><span class="sec-no">02</span><h2>剪辑方法论</h2><p>可复用的爆款生产流程</p></div>
     <div class="sec-line"></div>
     <div class="methods reveal" id="methodsGrid"></div>
   </div>
@@ -641,7 +601,7 @@ textarea.finput{ min-height:66px; }
 <!-- SECTION: skills -->
 <section id="skills">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-no">04</span><h2>软件与技能</h2><p>工具熟练度 + 核心能力</p></div>
+    <div class="sec-head"><span class="sec-no">03</span><h2>软件与技能</h2><p>工具熟练度 + 核心能力</p></div>
     <div class="sec-line"></div>
     <div class="skills-layout">
       <div class="reveal" id="skillsList"></div>
@@ -653,41 +613,12 @@ textarea.finput{ min-height:66px; }
 <!-- SECTION: experience -->
 <section id="experience">
   <div class="wrap">
-    <div class="sec-head"><span class="sec-no">05</span><h2>工作经历</h2><p>从短视频到短剧后期组长</p></div>
+    <div class="sec-head"><span class="sec-no">04</span><h2>工作经历</h2><p>从短视频到短剧后期组长</p></div>
     <div class="sec-line"></div>
     <div class="timeline reveal" id="timeline"></div>
   </div>
 </section>
 
-<!-- SECTION: insight -->
-<section id="insight">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-no">06</span><h2>行业认知</h2><p>不只懂剪辑，也懂平台与数据</p></div>
-    <div class="sec-line"></div>
-    <div class="insights reveal" id="insightGrid"></div>
-  </div>
-</section>
-
-<!-- SECTION: education -->
-<section id="education">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-no">07</span><h2>教育背景与证书</h2></div>
-    <div class="sec-line"></div>
-    <div class="edu-layout">
-      <div class="edu-card reveal" id="eduCard"></div>
-      <div class="edu-card reveal" id="certCard"></div>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION: quotes -->
-<section id="quotes">
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-no">08</span><h2>合作方评价</h2><p>制片人 / 导演 / 后期总监</p></div>
-    <div class="sec-line"></div>
-    <div class="quotes reveal" id="quoteGrid"></div>
-  </div>
-</section>
 </main>
 
 <!-- SECTION: footer -->
@@ -709,10 +640,6 @@ textarea.finput{ min-height:66px; }
         打印 / 存为 PDF
       </button>
     </div>
-    <p class="footer-note">
-      修改简历内容：点右下角「编辑内容」→ 直接填写 → 实时预览 →「导出代码」下载 resume-data.js，覆盖 assets 文件夹内同名文件即可<br>
-      本页版式与交互无需改动，替换文字后所有栏目自动重排
-    </p>
   </div>
 </footer>
 
@@ -723,8 +650,7 @@ textarea.finput{ min-height:66px; }
 <!-- SECTION: editor-entry -->
 <button class="edit-fab" id="editFab" type="button" aria-label="编辑简历内容">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z"/></svg>
-  编辑内容
-  <span class="fab-tip">不用改代码，直接填写</span>
+
 </button>
 
 <!-- SECTION: draft-bar -->
@@ -771,6 +697,11 @@ textarea.finput{ min-height:66px; }
 
 <script src="assets/resume-data.js"></script>
 <script>
+/* SECTION: editor-switch —— 上线开关：editorEnabled 非 true 时隐藏全部编辑入口 */
+var EDITOR_ENABLED=(typeof SITE_CONFIG!=='undefined') && !!SITE_CONFIG && SITE_CONFIG.editorEnabled===true;
+if(!EDITOR_ENABLED){ document.body.className+=' editor-off'; }
+</script>
+<script>
 /* SECTION: icons */
 var ICONS = {
   phone:'<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>',
@@ -804,6 +735,13 @@ function renderHero(){
   var p=RESUME.profile||{};
   var name=txt(p.name)||'你的名字';
   document.title=name.replace(/\s/g,'')+' · '+(txt(p.title)||'短剧剪辑师')+'个人简历';
+  /* 姓名动态渲染：首字原色，其余字符用渐变高亮，与原版式一致 */
+  var chars=Array.from(name.trim());
+  if(chars.length>1){
+    document.getElementById('heroName').innerHTML=esc(chars[0])+'<span class="grad-tx">'+esc(chars.slice(1).join(''))+'</span>';
+  } else {
+    document.getElementById('heroName').innerHTML='<span class="grad-tx">'+esc(name)+'</span>';
+  }
   document.getElementById('heroRole').textContent=txt(p.title);
   document.getElementById('heroIntention').textContent=txt(p.intention);
   document.getElementById('heroSlogan').textContent=txt(p.slogan);
@@ -841,7 +779,7 @@ function renderStats(){
   }).join('')||'<div class="empty-hint">尚未填写数据看板</div>';
 }
 
-/* SECTION: render-works */
+/* SECTION: render-works（竖版海报：图 + 剧名，点击跳转） */
 function renderWorks(){
   var grid=document.getElementById('worksGrid');
   grid.innerHTML='';
@@ -850,37 +788,24 @@ function renderWorks(){
 
   works.forEach(function(w){
     w=w||{};
-    var metrics=list(w.metrics);
-    var card=document.createElement('article');
-    card.className='work reveal';
+    var url=txt(w.link).trim();
+    /* 仅允许 http/https 协议，避免 javascript: 等危险链接 */
+    var safe=/^https?:\/\//i.test(url);
+    var card=document.createElement(safe?'a':'div');
+    card.className='work reveal'+(safe?' has-link':'');
+    if(safe){
+      card.href=url;
+      card.target='_blank';
+      card.rel='noopener noreferrer';
+    }
 
     card.innerHTML=
       '<div class="work-cover">'+
         '<img alt="'+esc(txt(w.alt)||txt(w.title))+'" data-image loading="lazy">'+
         '<div class="cover-fallback">'+esc(txt(w.title))+'</div>'+
-        (txt(w.genre).trim()?'<span class="cover-badge">'+esc(txt(w.genre))+'</span>':'')+
-        (metrics.length?'<span class="cover-play">播放 '+esc(txt(metrics[0].v))+'</span>':'')+
+        (safe?'<span class="work-link" aria-hidden="true">'+svg('link')+'</span>':'')+
       '</div>'+
-      '<div class="work-body">'+
-        '<h3 class="work-title">'+esc(txt(w.title))+'</h3>'+
-        '<div class="work-info">'+
-          '<div><b>平台</b><span>'+esc(txt(w.platform))+'</span></div>'+
-          '<div><b>体量</b><span>'+esc(txt(w.episodes))+'</span></div>'+
-          '<div><b>我负责</b><span>'+esc(txt(w.role))+'</span></div>'+
-        '</div>'+
-        '<div class="work-metrics">'+
-          metrics.map(function(m){ return '<div class="metric"><em>'+esc(txt(m.k))+'</em><strong>'+esc(txt(m.v))+'</strong></div>'; }).join('')+
-        '</div>'+
-        '<button class="work-toggle" type="button" data-primary-action aria-expanded="false">'+
-          '<span>展开剪辑手记</span>'+svg('down')+
-        '</button>'+
-        '<div class="work-detail"><div class="detail-in">'+
-          '<div class="d-block"><h5>钩子设计</h5><p>'+esc(txt(w.hook))+'</p></div>'+
-          '<div class="d-block"><h5>节奏处理</h5><p>'+esc(txt(w.rhythm))+'</p></div>'+
-          '<div class="d-block"><h5>成果复盘</h5><p>'+esc(txt(w.result))+'</p></div>'+
-          (txt(w.note).trim()?'<div class="d-note">'+esc(txt(w.note))+'</div>':'')+
-        '</div></div>'+
-      '</div>';
+      '<h3 class="work-title">'+esc(txt(w.title))+'</h3>';
 
     /* 图片以运行时赋值方式写入，失败时隐藏并显示文字底 */
     var img=card.querySelector('[data-image]');
@@ -940,43 +865,8 @@ function renderExperience(){
   }).join('')||'<div class="empty-hint">尚未填写工作经历</div>';
 }
 
-/* SECTION: render-insight */
-function renderInsight(){
-  document.getElementById('insightGrid').innerHTML=list(RESUME.insights).map(function(i){
-    return '<div class="insight"><span class="insight-tag">'+esc(txt(i.tag))+'</span><p>'+esc(txt(i.text))+'</p></div>';
-  }).join('')||'<div class="empty-hint">尚未填写行业认知</div>';
-}
-
-/* SECTION: render-education */
-function renderEducation(){
-  document.getElementById('eduCard').innerHTML='<h4>教育背景</h4>'+(list(RESUME.education).map(function(e){
-    return '<div class="edu-item"><span class="edu-ico">'+svg('edu')+'</span><div>'+
-      '<span class="edu-period">'+esc(txt(e.period))+'</span>'+
-      '<strong>'+esc(txt(e.school))+'</strong><em>'+esc(txt(e.major))+'</em><p>'+esc(txt(e.detail))+'</p>'+
-    '</div></div>';
-  }).join('')||'<div class="empty-hint">尚未填写教育背景</div>');
-
-  document.getElementById('certCard').innerHTML='<h4>专业证书</h4><ul class="cert-list">'+
-    (list(RESUME.certificates).map(function(c){ return '<li>'+svg('check')+'<span>'+esc(txt(c))+'</span></li>'; }).join('')||'<div class="empty-hint">尚未填写证书</div>')+
-  '</ul>';
-}
-
-/* SECTION: render-quotes */
-function renderQuotes(){
-  document.getElementById('quoteGrid').innerHTML=list(RESUME.quotes).map(function(q){
-    return '<div class="quote"><div class="quote-mark">“</div><p>'+esc(txt(q.text))+'</p><div class="quote-from">— '+esc(txt(q.from))+'</div></div>';
-  }).join('')||'<div class="empty-hint">尚未填写合作方评价</div>';
-}
-
-/* SECTION: interact-work-toggle */
-document.getElementById('worksGrid').addEventListener('click',function(ev){
-  var btn=ev.target.closest('.work-toggle');
-  if(!btn) return;
-  var card=btn.closest('.work');
-  var open=card.classList.toggle('open');
-  btn.setAttribute('aria-expanded',open?'true':'false');
-  btn.querySelector('span').textContent=open?'收起剪辑手记':'展开剪辑手记';
-});
+/* SECTION: interact-work-link-note */
+/* 作品卡片现为整卡跳转链接，无需展开交互 */
 
 /* SECTION: interact-copy-print */
 document.addEventListener('click',function(ev){
@@ -993,11 +883,6 @@ document.addEventListener('click',function(ev){
     return;
   }
   if(ev.target.closest('[data-print]')){
-    document.querySelectorAll('.work.open').forEach(function(c){
-      c.classList.remove('open');
-      var b=c.querySelector('.work-toggle');
-      if(b){ b.setAttribute('aria-expanded','false'); b.querySelector('span').textContent='展开剪辑手记'; }
-    });
     setTimeout(function(){ window.print(); },260);
   }
 });
@@ -1082,7 +967,7 @@ function renderFooter(){
 /* SECTION: render-all */
 function renderAll(){
   renderHero(); renderStats(); renderWorks(); renderMethods();
-  renderSkills(); renderExperience(); renderInsight(); renderEducation(); renderQuotes();
+  renderSkills(); renderExperience();
   renderFooter();
   observeReveals();
 }
@@ -1150,20 +1035,13 @@ var EDITOR_GROUPS=[
       { path:'label', label:'说明', ph:'累计有效播放' }
     ], cls:'three' }
   ]},
-  { key:'works', title:'爆款作品', hint:'图文卡片 · 可展开手记', lists:[
+  { key:'works', title:'爆款作品', hint:'竖版海报 · 点击跳转', lists:[
     { path:'__root__', label:'作品', block:true, fields:[
       { path:'title', label:'剧名' },
-      { path:'genre', label:'题材', ph:'都市甜宠 · 契约婚姻' },
-      { path:'platform', label:'平台', ph:'红果短剧 + 抖音端原生' },
-      { path:'episodes', label:'体量', ph:'80 集 / 单集 95 秒' },
-      { path:'role', label:'我负责', ph:'主剪辑 + 切条投流素材' },
       { path:'image', label:'封面图链接', ph:'粘贴图片 URL，留空则显示文字底' },
-      { path:'alt', label:'封面图描述', ph:'用于无障碍与图片加载失败时显示' },
-      { path:'hook', label:'钩子设计', type:'textarea' },
-      { path:'rhythm', label:'节奏处理', type:'textarea' },
-      { path:'result', label:'成果复盘', type:'textarea' },
-      { path:'note', label:'备注', ph:'如：示例数据，请替换为真实成绩' }
-    ], metrics:true }
+      { path:'link', label:'点击跳转链接', ph:'如：https://... 留空则不可点击' },
+      { path:'alt', label:'封面图描述', ph:'用于无障碍与图片加载失败时显示' }
+    ]}
   ]},
   { key:'methods', title:'剪辑方法论', hint:'核心竞争力', lists:[
     { path:'__root__', label:'方法论', block:true, fields:[
@@ -1187,29 +1065,6 @@ var EDITOR_GROUPS=[
       { path:'role', label:'岗位', ph:'高级剪辑师 / 后期组长' },
       { path:'highlight', label:'亮点', type:'textarea' }
     ], points:true }
-  ]},
-  { key:'insights', title:'行业认知', hint:'差异化亮点', lists:[
-    { path:'__root__', label:'认知', block:true, fields:[
-      { path:'tag', label:'标签', ph:'题材趋势' },
-      { path:'text', label:'内容', type:'textarea' }
-    ]}
-  ]},
-  { key:'education', title:'教育背景', hint:'', lists:[
-    { path:'__root__', label:'学历', block:true, fields:[
-      { path:'period', label:'时间', ph:'2015.09 — 2019.06' },
-      { path:'school', label:'学校', ph:'浙江传媒学院' },
-      { path:'major', label:'专业', ph:'数字媒体艺术 · 本科' },
-      { path:'detail', label:'说明', type:'textarea' }
-    ]}
-  ]},
-  { key:'certificates', title:'专业证书', hint:'', lists:[
-    { path:'__root__', label:'证书', itemLabel:'证书名称', ph:'Adobe 认证专家（ACP）' }
-  ]},
-  { key:'quotes', title:'合作方评价', hint:'', lists:[
-    { path:'__root__', label:'评价', block:true, fields:[
-      { path:'text', label:'评价内容', type:'textarea' },
-      { path:'from', label:'评价人', ph:'制片人 · 星辰微短剧' }
-    ]}
   ]}
 ];
 
@@ -1335,6 +1190,7 @@ function buildEditor(){
 /* SECTION: editor-events */
 var drawer=document.getElementById('drawer'), drawerMask=document.getElementById('drawerMask');
 function openDrawer(){
+  if(!EDITOR_ENABLED) return;
   buildEditor();
   drawer.classList.add('open'); drawerMask.classList.add('open');
   drawer.setAttribute('aria-hidden','false');
@@ -1406,8 +1262,18 @@ function blankItem(groupKey){
 
 /* SECTION: editor-export */
 function serialize(){
+  /* 必须 return：缺返回值会导出 undefined，覆盖数据文件导致内容全部丢失 */
+  /* 保留 SITE_CONFIG：导出文件会覆盖数据文件，丢掉它会让上线开关失效 */
+  var cfgOn=(typeof SITE_CONFIG!=='undefined') && !!SITE_CONFIG && SITE_CONFIG.editorEnabled===true;
   return '/* SECTION: resume-data —— 简历全部内容集中在此文件，改文字即可，无需改动网页 */\n'+
-    '/* 可在简历页面右下角「编辑内容」面板可视化修改后导出本文件覆盖 */\n\n'+
+    '/* 由页面「编辑内容」面板导出，也可手工编辑 */\n\n'+
+    '/* ============================================================\n'+
+    '   上线开关：控制页面是否显示「编辑内容」功能\n'+
+    '     true  = 显示编辑按钮、编辑面板、草稿提示条（自己改内容时用）\n'+
+    '     false = 全部隐藏，只展示简历（发布上线时用）\n'+
+    '   只需改这一处，不用动 index.html\n'+
+    '   ============================================================ */\n'+
+    'var SITE_CONFIG = { editorEnabled: '+cfgOn+' };\n\n'+
     'var RESUME = '+JSON.stringify(RESUME,null,2)+';\n';
 }
 function downloadFile(name,content){
@@ -1449,9 +1315,10 @@ document.addEventListener('click',function(ev){
 });
 
 /* SECTION: init */
-loadDraft();
+/* 上线模式下不加载本机草稿：草稿只属于编辑者本地，不能覆盖线上真实内容 */
+if(EDITOR_ENABLED) loadDraft();
 renderAll();
-syncDraftBar();
+if(EDITOR_ENABLED) syncDraftBar();
 
 if(location.hash){
   var t=document.querySelector(location.hash);
